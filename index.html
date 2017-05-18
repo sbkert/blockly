@@ -35,6 +35,21 @@
     }
   </style>
 </head>
+  <xml id="toolbox" style="display: none">
+  <block type="move_forward"></block>
+  <block type="move_backward"></block> 
+  <block type="turn_left"></block>
+  <block type="turn_right"></block>
+</xml>
+  
+<script src="blockly_compressed.js"></script>
+<script src="blocks_compressed.js"></script>
+<script src="msg/js/tr.js"></script>
+  <script>
+  var workspace = Blockly.inject('blocklyDiv',
+      {toolbox: document.getElementById('toolbox')});
+</script>
+  
 <body>
   <table>
     <tr>
@@ -51,7 +66,10 @@
     </tr>
     <tr>
       <td id="blocklyArea">
-      Blok alanı
+        <div id="blocklyDiv" style="height: 480px; width: 30%;">
+         Blok alanı
+        </div>
+     
       </td>
    <td id="hareketAlan">
        Hareket alanı
