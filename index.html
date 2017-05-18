@@ -1,74 +1,45 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Blockly Demo: Resizable Blockly (Part 1)</title>
+  <title>Blockly Demo: Fixed Blockly</title>
+  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blocks_compressed.js"></script>
+  <script src="../../msg/js/en.js"></script>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
     body {
       background-color: #fff;
       font-family: sans-serif;
-      overflow: hidden;
     }
     h1 {
       font-weight: normal;
       font-size: 140%;
     }
-    table  {
-      height: 100%;
-      width: 100%;
-    }
-    #blocklyArea {
-      height: 99%;
-      background: #fc9;
-      text-align: center;
-      width:100%;
-    }
-   
   </style>
 </head>
-  <xml id="toolbox" style="display: none">
-  <block type="move_forward"></block>
-  <block type="move_backward"></block> 
-  <block type="turn_left"></block>
-  <block type="turn_right"></block>
-</xml>
-  
-<script src="blockly_compressed.js"></script>
-<script src="blocks_compressed.js"></script>
-<script src="msg/js/tr.js"></script>
-  <script>
-  var workspace = Blockly.inject('blocklyDiv',
-      {toolbox: document.getElementById('toolbox')});
-</script>
-  
 <body>
-  <table>
-    <tr>
-      <td>
-        <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
-          <a href="../index.html">Demos</a> &gt; Resizable Blockly (Part 1)</h1>
+  <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
+    <a href="../index.html">Demos</a> &gt; Fixed Blockly</h1>
 
-        <p>The first step in creating a resizable Blockly workspace is to use
-        CSS or tables to create an area for it.
-        Next, <a href="overlay.html">inject Blockly</a> over that area.</p>
+  <p>Zamanda Yolculuk</p>
 
-        <p>&rarr; More info on <a href="https://developers.google.com/blockly/guides/configure/web/resizable">injecting resizable Blockly</a>&hellip;</p>
-      </td>
-    </tr>
-    <tr>
-      <td id="blocklyArea">
-        <div id="blocklyDiv" style="height: 480px; width:600px;">
-         Blok alanı
-        </div>
-     
-      </td>
-  
-      
-    </tr>
-  </table>
+  <p>&rarr; More info on <a href="https://developers.google.com/blockly/guides/configure-blockly/web/fixed-size">injecting fixed-sized Blockly</a>&hellip;</p>
+
+  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+
+  <xml id="toolbox" style="display: none">
+    <block type="move_forward"></block>
+    <block type="move_backward"></block>
+    <block type="turn_left"></block>
+    <block type="turn_right"></block>    
+  </xml>
+
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+        {media: '../../media/',
+         toolbox: document.getElementById('toolbox')});
+  </script>
+
 </body>
 </html>
